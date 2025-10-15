@@ -1,92 +1,70 @@
-# Walmart-Drone-Analytics
-# 🚀 Walmart Drone Delivery — Strategic Insights Dashboard
+# 🚀 Walmart Drone Delivery — Strategic Insights Dashboard  
 
 ![Power BI](https://img.shields.io/badge/PowerBI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![SQL](https://img.shields.io/badge/SQL-Analytics-336791?style=for-the-badge&logo=mysql&logoColor=white)
-![Python](https://img.shields.io/badge/Python-Data%20Processing-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-Data%20Prep-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![SQL](https://img.shields.io/badge/SQL-Backend-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Analytics](https://img.shields.io/badge/Business-Analytics-blue?style=for-the-badge&logo=googleanalytics)
 
 ---
 
-## 📊 Project Overview
+## 🧠 Overview  
 
-The **Walmart Drone Delivery — Strategic Insights Dashboard** analyzes the operational efficiency and profitability of Walmart’s drone delivery initiative.  
-It combines **SQL-driven analytics**, **Power BI visualization**, and **scenario simulations** to uncover key insights on:
+An interactive **Power BI dashboard** analyzing Walmart’s drone delivery performance to drive strategic and operational decisions.  
 
-- 🚁 Drone vs Ground delivery performance  
-- 💰 Profitability across product categories and states  
-- 🌦️ Weather impact on delivery efficiency  
-- 📈 Profit growth projections through fleet expansion  
-
----
-
-## 🧠 Key Insights
-
-| Metric | Insight |
-|--------|----------|
-| **Drone Share** | Drones account for **53.6%** of total deliveries |
-| **Profit** | Achieved **$2.6M** baseline profit with potential **+4.1% uplift** from 30% fleet expansion |
-| **Customer Satisfaction** | Average score of **4.49 / 5**, with highest in Texas |
-| **Operational Efficiency** | Drone deliveries are **35% faster** than ground |
-| **Success Rate** | 97.6% delivery success achieved under varying weather conditions |
+The dashboard integrates insights from **100K orders** to uncover:  
+- 🚁 **Drone vs Ground delivery profitability**  
+- 💵 **Impact of Drone Fleet Expansion on profit growth**  
+- 📈 **Effect of Product GM% (Gross Margin %) on margins**  
+- 🌦️ **Delivery efficiency under different weather conditions**  
 
 ---
 
-## 🧩 Tech Stack
+## 🎯 Key Features  
 
-<div align="center">
+### 🟢 1. Drone Fleet Expansion Simulation  
+- Built a **what-if analysis** to simulate profit impact when expanding drone fleet size.  
+- Enabled executives to visualize **how incremental drone adoption (10%–30%)** affects profitability and delivery speed.  
+- Helped identify optimal expansion range with **~4% profit growth** potential.  
+
+### 🟡 2. Product GM% Sensitivity  
+- Designed a **gross margin slider** that models the relationship between product margin and total profitability.  
+- Useful for finance teams to project **profit elasticity** under changing product cost or pricing strategies.  
+
+---
+
+## 📊 Dashboard Preview  
+
+| Scenario Simulation | Main Dashboard |
+|----------------------|----------------|
+| ![Profit Simulation](https://github.com/milan121999/Walmart-Drone-Delivery/blob/main/assets/dashboard_growth.png) | ![Main Dashboard](https://github.com/milan121999/Walmart-Drone-Delivery/blob/main/assets/dashboard_main.png) |
+
+---
+
+## 🛠️ Tools & Stack  
 
 | Tool | Purpose |
 |------|----------|
-| 🐬 **MySQL / SQL Server** | Data cleaning, aggregation & KPIs |
-| 📊 **Power BI** | Dashboard visualization & scenario simulation |
-| 🐍 **Python (Pandas, NumPy)** | Data preprocessing (optional) |
-| 🧾 **Excel** | Dataset preparation & schema validation |
-
-</div>
+| 🐬 **SQL** | Data cleaning and aggregation |
+| 📊 **Power BI** | Visualization & scenario modeling |
+| 🧮 **Excel** | Dataset preparation |
+| 🧠 **Analytical Modeling** | Profit growth & fleet optimization |
 
 ---
 
-## 🏗️ Data Model
+## 📈 Outcomes  
 
-**Table:** `walmart_v4`  
-Contains delivery-level data across regions and weather conditions.
-
-| Column | Description |
-|---------|-------------|
-| `Order_ID` | Unique order identifier |
-| `State`, `City` | Delivery region |
-| `Product_Category` | Household, Apparel, Grocery, etc. |
-| `Delivery_Type` | Drone / Ground |
-| `Feature_Type` | Express / Standard |
-| `Distance_km` | Delivery distance |
-| `Order_Value_USD` | Customer order value |
-| `Revenue_USD` | Total revenue earned |
-| `Cost_USD` | Operational cost |
-| `Profit_USD` | Revenue – Cost |
-| `Delivery_Time_Min` | Delivery completion time |
-| `Success` | Binary delivery success (0/1) |
-| `Satisfaction_Score` | Customer feedback rating |
-| `Weather` | Delivery condition |
+- Boosted analytical clarity with **dynamic what-if parameters** for fleet and margin changes.  
+- Revealed **53.6% drone delivery share** with potential **$2.7M profit** under 30% expansion.  
+- Provided an executive-ready view of performance, efficiency, and profitability drivers.  
 
 ---
 
-## 🧮 SQL Logic (Highlights)
+## 👤 Author  
 
-```sql
--- Profit by Product Category
-SELECT 
-    Product_Category,
-    ROUND(SUM(Profit_USD), 2) AS Total_Profit_USD
-FROM walmart_v4
-GROUP BY Product_Category
-ORDER BY Total_Profit_USD DESC;
+**Milan Paremajalu Suresh**  
+🎓 M.S. in Business Analytics | Arizona State University  
+💼 SQL | Power BI | Python | Business Analytics  
 
--- Delivery Performance by Feature Type
-SELECT 
-    Delivery_Type, Feature_Type,
-    ROUND(SUM(Profit_USD), 2) AS Total_Profit_USD,
-    ROUND(AVG(Delivery_Time_Min), 2) AS Avg_Delivery_Time
-FROM walmart_v4
-GROUP BY Delivery_Type, Feature_Type;
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/milan-paremajalu-suresh-311028205/)  
+[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?style=for-the-badge&logo=github)](https://github.com/milan121999)
+
+---
