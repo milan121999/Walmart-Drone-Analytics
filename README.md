@@ -34,7 +34,7 @@ The dashboard integrates insights from **100K orders** to uncover:
 ## 📊 Dashboard Preview  
 
 
-![Profit Simulation](https://github.com/milan121999/Walmart-Drone-Delivery/Dashboard/Screenshots/scenario-profit-curve.png) 
+![Profit Simulation](https://github.com/milan121999/Walmart-Drone-Analytics/blob/main/Walmart_Drone_Delivery/Dashboard/Screenshots/scenario-profit-curve.png) 
 ![Main Dashboard](https://github.com/milan121999/Walmart-Drone-Analytics/blob/main/Walmart_Drone_Delivery/Dashboard/Screenshots/Overview.png)  
 
 ---
